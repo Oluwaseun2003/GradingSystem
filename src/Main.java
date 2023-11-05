@@ -10,32 +10,33 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter student's score: \n");
         int score = scanner.nextInt();
-        char grade;
+        char studentGrade;
 
-        // Calculate the grade using switch case
-        if (score < 0 || score > 100) {
-            grade = 'I'; // 'I' for Invalid score
-        } else {
+        if (score <= 100) {
             switch (score / 10) {
                 case 10:
                 case 9:
-                    grade = 'A';
+                    studentGrade = 'A';
                     break;
                 case 8:
-                    grade = 'B';
+                    studentGrade = 'B';
                     break;
                 case 7:
-                    grade = 'C';
+                    studentGrade = 'C';
                     break;
                 case 6:
-                    grade = 'D';
+                    studentGrade = 'D';
                     break;
                 default:
-                    grade = 'F';
+                    studentGrade = 'F';
             }
+        } else {
+            studentGrade = 'I';
+
+
         }
 
-        System.out.println("Student's grade: " + grade);
+        System.out.println("Student's grade: " + studentGrade);
 
         }
     }
